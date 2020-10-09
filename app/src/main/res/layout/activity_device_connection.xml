@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TicTacToe"
+    android:background="#fff">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/connectinfo"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textColor="#009688"
+        android:layout_marginTop="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout1"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <androidx.legacy.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/send"
+            android:text="SEND"
+            android:textColor="#fff"
+            android:textSize="25sp"
+            android:textStyle="italic"
+            android:textAlignment="center"
+            android:background="@drawable/buttons"
+            android:onClick="sendButton"/>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/receive"
+            android:text="RECEIVE"
+            android:textSize="25dp"
+            android:textStyle="italic"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:background="@drawable/buttons"
+            android:onClick="receiveButton"/>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout2"
+        android:orientation="horizontal"
+        android:layout_below="@id/layout1"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/devicelist"
+            android:textAlignment="center"
+            android:background="#ECEBEB"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
